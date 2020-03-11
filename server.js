@@ -5,9 +5,8 @@ var cookieparser = require('cookie-parser');
 require('dotenv').config();
 var compression = require('compression');
 var router = express.Router();
-var rootRouter = require('./app/Routes/index')(router);
+var rootRouter = require('./app/routes/index')(router);
 var cors = require('cors');
-var dbConfiguration = require('./app/config/DB');
 // const _user = require('./app/Model/user');
 const ObjectId = require('mongoose').Types.ObjectId;
 
@@ -38,7 +37,7 @@ app.get('/', function (req, res) {
         res.json({ docs, message: "hello world" });
 });
 
-dbConfiguration();
+console.log('set up successfull !!')
 
 module.exports = app;
 
