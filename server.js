@@ -34,7 +34,7 @@ app.use('/api', rootRouter);
 // });
 app.get('/', function (req, res) {
  
-        res.json({ docs, message: "hello world" });
+        res.json({ message: "hello world" });
 });
 
 console.log('set up successfull !!')
