@@ -3,7 +3,6 @@ const bcrypt = require('bcryptjs')
 const oneSignal = require('../middleware/oneSignal');
 exports.Register =(data)=>{
     return new Promise((resolve , reject)=>{
-        const hash = bcrypt.hashSync(data.password , 10)
 const details = {
     email:data.email,
     id: data.id
