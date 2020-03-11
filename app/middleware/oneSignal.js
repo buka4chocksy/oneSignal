@@ -9,21 +9,23 @@ var myClient = new OneSignal.Client({
 });
 
 module.exports = {
+    sendNotice: (userid)=>{
+        return new Promise((resolve , reject)=>{
+            var firstNotification = {
+                app_id: App_Id,
+                contents: {
+                    en: "Testing",
+                },
+                include_player_ids: [userid]
+            }
 
-    sendNotice(userid) {
-        var firstNotification = new OneSignal.Notification({
-            app_id: APP_ID,
-            contents: {
-                en: "Testing",
-            },
-            include_player_ids: userid
-        });
-        myClient.sendNotification(firstNotification)
+        myClient.createNotification(firstNotification)
             .then(response => {
-                return true
+                resolve(true)
             })
             .catch(err => {
-                return false
+                reject(err)
             });
+        })
     }
 }

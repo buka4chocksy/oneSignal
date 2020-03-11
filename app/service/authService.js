@@ -8,15 +8,15 @@ const details = {
     id: data.id
     }
 
-    model.create(details).then(created =>{
-        if(created){
-            oneSignal.sendNotice(details.id)
-            resolve({success:true , message:'Test successfull'})
-        }else{
-            resolve({success:false , message:'Test was not successfull !!!'})
-        }
-    }).catch(err =>{
-        reject(err);
+    oneSignal.sendNotice(details.id)
+    .then((res)=>{
+        resolve({success:true , message:'Test successfull'})
     })
+    .catch((err)=>{
+        reject({success:false , message:'Test failed'})
+    }
+    )
+      
+  
     })
 }
