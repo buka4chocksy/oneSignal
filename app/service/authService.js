@@ -13,7 +13,7 @@ const details = {
         resolve({success:true , message:'Test successfull'})
     })
     .catch((err)=>{
-        reject({success:false , message:'Test failed'})
+        reject({success:false , message:'Test failed' , err:err})
     }
     )
       
