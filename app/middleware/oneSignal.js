@@ -14,7 +14,7 @@ module.exports = {
             var firstNotification = {
                 app_id: App_Id,
                 contents: {
-                    en: "Testing",
+                    en: "Testing should be done with the method of doing things and we will do all within our our will to make sure we achieve the best of all within a short period of time",
                 },
                 include_player_ids: [userid]
             }
