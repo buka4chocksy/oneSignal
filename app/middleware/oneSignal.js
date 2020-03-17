@@ -16,7 +16,8 @@ module.exports = {
                 contents: {
                     en: "Testing should be done with the method of doing things and we will do all within our our will to make sure we achieve the best of all within a short period of time",
                 },
-                include_player_ids: [userid]
+                include_player_ids: [userid],
+                big_picture: "https://images.freecreatives.com/wp-content/uploads/2016/10/Feature-Image33.jpg"
             }
 
         myClient.createNotification(firstNotification)
